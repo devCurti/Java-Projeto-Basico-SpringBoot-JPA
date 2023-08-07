@@ -34,7 +34,7 @@ public class UserController {
 	
 	@PostMapping
 	public User insert(@RequestBody User user) {
-		User result = repository.findById(id).get();
+		User result = repository.save(user);
 		return result;
 	}
 }
